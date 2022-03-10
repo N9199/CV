@@ -1,0 +1,65 @@
+% !TeX program = lualatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title: SOP LaTeX Template
+%% Author: Soonho Kong / soonhok@cs.cmu.edu
+%% Created: 2012-11-12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Requirement:
+%%     You need to have the `Adobe Caslon Pro` font family.
+%%     For more information, please visit:
+%%     http://store1.adobe.com/cfusion/store/html/index.cfm?store=OLS-US&event=displayFontPackage&code=1712
+%%
+%% How to Compile:
+%%     $ xelatex main.tex
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1.75in,noheadfoot]{geometry}
+\usepackage{fontspec, color, enumerate, sectsty}
+\usepackage[normalem]{ulem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      YOUR INFORMATION
+%
+%      PLEASE EDIT THE FOLLOWING LINES ACCORDINGLY!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\soptitle}{Statement of Purpose}
+\newcommand{\yourname}{Nicholas Mc-Donnell}
+\newcommand{\youremail}{namcdonnell@uc.cl}
+
+%% FONTS SETUP
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Path = fonts/, Ligatures={Common}]{adobe_caslon_pro}
+\setmonofont[Path = fonts/, Scale=0.8]{monaco}
+\setsansfont[Path = fonts/, Scale=0.9]{Optima-Regular}
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&~{}}}
+\usepackage[bookmarks, colorlinks, breaklinks,
+pdftitle={\yourname - \soptitle},pdfauthor={\yourname}, unicode]{hyperref}
+\hypersetup{linkcolor=magneta,citecolor=magenta,filecolor=magenta,urlcolor=[named]{WildStrawberry}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Title and Author Name
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}{\huge \scshape \soptitle}\end{center}
+\begin{center}\vspace{0.2em} {\Large \yourname\\}
+  {\youremail}\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      SOP Body
+% NOTE: Use \amper instead of \&
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+Before I arrived at Pontifical Catholic University (UC) I wasn't sure what I wanted to do, I just knew I didn't want lab work or field work, so I applied to Math. That was one of my best decisions ever. I thrived on my first semester, it was packed with proof based courses, it was my first taste of real maths. Two things that caught my attention were a bit of group theory at the end of the Introduction to Algebra course and a bit of Algebraic Geometry in the Introduction to Geometry course, this prompted me to unofficially take the Abstract Algebra I course in my second semester where we followed part of Artin's Algebra. I found Rings and Groups fascinating structures, they naturally appeared on other courses and even in some competitive programming problems. That same semester I took Linear Algebra, which also solidified my love for algebraic structures. In parallel to all of this, at the end of my first semester, I was approached by a sophomore who had heard I liked competitive programming and offered me the chance to go a winter camp to learn more about competitive programming, to meet people and to compete with them, a tradition I followed until the pandemic stopped it. That invitation precipitated my involvement with the competitive programming community at UC, that same year I represented UC at the Latin America ICPC Contest and continued to do so there after until I graduated. Competitive Programming made me gain interest in Computer Science, but due to scheduling problems and some personal problems I had to be content with just taking more Algebra courses and continuing the Calculus series, Abstract Algebra II was fun, using Galois theory to prove the unsolvability of the quintic and the impossibility of trisecting the angle was the highlight of the course, though I wish we had enough time to learn more about modules. For my fourth semester I took a Number Theory course, I had heard that a professor who had been an assistant professor at Harvard was going to teach it, it was one of the best courses I took, we took a swift pass through basic analytic number theory, learning about Dirichlet series, the prime number theorem and culminating in Dirichlet's theorem on arithmetic progressions, we also took a look at Diophantine equations with the help of some basic algebraic number theory, finding solutions with Pell's equation and with elliptic curves. At the end of this semester the Teacher Assistant reached out to me and a friend to study Model Theory, and thus after talking with a suitable professor, the Model Theory seminar was born, I was given the job of organizing it, while also being part of the presenters. We used the start of the summer to learn the basics and finished the summer proving the compactness theorem and the Löwenheim-Skolem theorem, after comming back on March we took our attention to Universal Algebra, learning about the Isomorphism Theorems, Directly Indecomposable Algebras, Class Operators and Free Algebras. Prompted by the professor helping with the seminar I took Fundamentals of Mathematics, a course to fill my gaps in logic, set theory and model theory. Continuing my love for algebra, I took Introduction to Algebraic Geometry, where we followed tbe first few chapters of Algebraic Curves by Fulton, culminating in the Reimann-Roch Theorem. On the Analysis side, I took the Metric Spaces course which generalized various notions and intuitions which I learned during Real Analysis and some interesting theorems like the Banach Fixed-Point Theorem, the Arzela-Ascoli Theorem and the Stone-Weierstrass Theorem. The functional analysis part of the course plus my thirst for more `algebraic' courses made me take the Functional Analysis course on my sixth semester, adding this to Ordinary Differential Equations, Complex Analysis and Measure Theory made it the most analysis focused semester of my undergrad, but it was affected by the political instability that Chile was facing, with massive protests and injustice I sometimes found it hard to only keep maths on my head. This also affected the Model Theory seminar which we had to pause, just after going through some quick bits of a variety of topics, like Undecibility and the Knaster-Tarski Theorem, we had started with our next big topic, Forcing, but the world had other plans. Just as we were going to continue, the pandemic started, I became part of the student council and part the official university team for competitive programming, all of this and the fact that one our members had gone to do his Masters in France meant that we didn't have enough people to continue the seminar, extending the pause a bit more. I started my seventh semester a week before lockdown hit, taking Topology and Differential Geometry remotely was a weird but satisfying experience. For my eigth and last semester I took mostly theoretical CS courses, Formal Languages and Automata Theory, Algorithm Design and Analysis, and a Algorithmic Game Theory Course. The former being a window into an interesting are of CS, where we learned about various Finite Automata, Regular Languages, Kleene's Theorem, Pushdown Automata and Formal Grammars, while the latter being a deep dive into different theoretical and algorithmic results on game theory from the classic Arrow's Impossibilty Theorem to the PPAD algorithmic complexity class. After this semester, while in the middle of the pandemic I took the chance and decide to take a year doing research under Marcelo Arenas, hoping the pandemic would get a bit better. Now a year latter I'm applying to different PhDs and hoping to continue my journey with math and logic.
+
+\section*{Research Experience}
+\paragraph{Project \#1}
+As part of the courses offered at UC, there's an official undergraduate research project, were one has to work a professor in a mathematical topic, I worked with Marcelo Arenas, learning about the graph isomorphism problem, the Weisfeiler-Lehman Test and it's relation to first order logic and pebble games.
+
+\paragraph{Project \#2}
+At the same time of the above project I started working in a research project involving the Shapley Value and Boolean Circuits, in a way to measure how important different variables are to boolean models, it involved improving the proposed algorithm, implementing it and testing its practical performance. It's a still ongoing project.
+\end{document}

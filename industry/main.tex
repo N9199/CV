@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+
+\usepackage{subfiles}
+
+\input{\subfix{headers.sty}}
+
+\begin{document}
+
+\subfile{components/background}
+
+\resumesection{\emoji{books} Education}
+
+\subfile{components/education}
+
+\resumesection{\emoji{briefcase} Experience}
+
+\subfile{components/experience/UC}
+\subfile{components/experience/IMFD}
+
+\resumesection{\emoji{hand-with-fingers-splayed} Skills}
+
+\subfile{components/skills}
+
+\resumesection{\emoji{trophy} Awards}
+
+\subfile{components/awards}
+
+\end{document}
