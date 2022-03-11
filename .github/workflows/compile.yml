@@ -46,12 +46,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download Academic CV
-      - uses: actions/download-artifact@master
+        uses: actions/download-artifact@master
         with:
           name: academic_cv
           path: academic
       - name: Download Industry CV
-      - uses: actions/download-artifact@master
+        uses: actions/download-artifact@master
         with:
           name: industry_cv
           path: industry
