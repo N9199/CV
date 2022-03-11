@@ -28,15 +28,15 @@ jobs:
           echo $GITHUB_PATH
           echo $GITHUB_WORKSPACE
   
-      - name: Industry CV Compilation
-        uses: dante-ev/latex-action@2021-A
-        with:
-          root_file: industry/main.tex
+#       - name: Industry CV Compilation
+#         uses: dante-ev/latex-action@2021-A
+#         with:
+#           root_file: industry/main.tex
 
-      - name: Add and Commit
-        uses: EndBug/add-and-commit@v7.4.0
-        with:
-          add: 'industry/main.pdf --force'
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          message: 'Compiled'
+#       - name: Add and Commit
+#         uses: EndBug/add-and-commit@v7.4.0
+#         with:
+#           add: 'industry/main.pdf --force'
+#           author_name: 'github-actions[bot]'
+#           author_email: 'github-actions[bot]@users.noreply.github.com'
+#           message: 'Compiled'
