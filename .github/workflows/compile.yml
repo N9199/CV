@@ -25,13 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: |
-          echo $GITHUB_PATH
-          echo $GITHUB_WORKSPACE
-  
-#       - name: Industry CV Compilation
-#         uses: dante-ev/latex-action@2021-A
-#         with:
-#           root_file: industry/main.tex
+          working_dir=$GITHUB_WORKSPACE
+          GITHUB_WORKSPACE=$working_dir/industry
+      - name: Industry CV Compilation
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: main.tex
 
 #       - name: Add and Commit
 #         uses: EndBug/add-and-commit@v7.4.0
@@ -40,3 +39,5 @@ jobs:
 #           author_name: 'github-actions[bot]'
 #           author_email: 'github-actions[bot]@users.noreply.github.com'
 #           message: 'Compiled'
+      - run: echo $working_dir 
+     
