@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Industry CV Compilation
+      - name: Academic CV Compilation
         uses: dante-ev/latex-action@2021-A
         with:
           root_file: main.tex
@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [compile_industry, compile_academic]
     steps:
+      - uses: actions/checkout@v2
       - name: Add and Commit
         uses: EndBug/add-and-commit@v7.4.0
         with:
