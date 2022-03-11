@@ -17,6 +17,12 @@ jobs:
         with:
           root_file: main.tex
           working_directory: industry
+          
+      - uses: actions/upload-artifact@master
+        with:
+          name: industry_cv
+          path: industry/main.pdf
+
   
   compile_academic:
     runs-on: ubuntu-latest
@@ -28,12 +34,27 @@ jobs:
         with:
           root_file: main.tex
           working_directory: academic
+      - uses: actions/upload-artifact@master
+        with:
+          name: academic_cv
+          path: academic/main.pdf
+
 
   commit_compiled:
     runs-on: ubuntu-latest
     needs: [compile_industry, compile_academic]
     steps:
       - uses: actions/checkout@v2
+      - name: Download Academic CV
+      - uses: actions/download-artifact@master
+        with:
+          name: academic_cv
+          path: academic
+      - name: Download Industry CV
+      - uses: actions/download-artifact@master
+        with:
+          name: industry_cv
+          path: industry
       - name: Add and Commit
         uses: EndBug/add-and-commit@v7.4.0
         with:
